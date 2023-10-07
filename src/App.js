@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home/HomePage";
+import PasswordMngForm from "./components/NewPassMngForm/PasswordMngForm";
+import PasswordMngCard from "./components/PassMngCard/PasswordMngCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Home Page */}
+        <Route exact path="/" element={<Home />} />
+        {/* A form will be displayed to create new password */}
+        <Route exact path="/add-new-password" element={<PasswordMngForm />} />
+        {/* Displaying all saved passwordS */}
+        <Route exact path="/show-my-passwords" element={<PasswordMngCard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,31 @@
+**Password Manager Frontend Application**
+
+This frontend react application provides the UI for creating, reading, updating and deleting their password for any websites
+Users can store and view in a cardd lay out their website name, user name and password of the website and website url
+
+## Features
+
+1.Users have a form for creating new password manager
+2.Users see their password in a card layout and has the option of hide and show password
+3.Users have an option of updating the username and password
+4.Users have an option of deleting their passsword manager
+
+## Project setup
+
+--Get into frontend folder
+cd frontend
+
+--Install packages
+npm install
+
+## Command for running the frontend react ap
+
+npm run start
+react app starts on port 3000
+
+## Project Component Structure
+
+Home/HomePage.js -- responsible for home page
+NewPassMngForm/PasswordMngForm -- responsible for the form of creating a new password manager
+PassMngCard/PasswordMngCard.js -- responsible for displaying all saved password manager in card lay out
+EditPassMngForm/PassMngEditForm.js -- responsible for the form of updating username and password
